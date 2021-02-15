@@ -1,0 +1,12 @@
+{
+    "StudentID" : "60114440374",
+    "Name" : "นายอธิป  ศิริเศวตกุลวงศ์",
+    "ProjectName": "ระบบบริหารจารการหอ AA Place",
+    "Type" : "การพัฒนาด้านวิทยาศาสตร์และเทคโนโลยี",
+    "GraduationYear" : "2563",
+    "Abstract" : "POS สำหรับช่วยในการจัดการข้อมูลรายรับรายจ่ายข้อมูลผู้เข้าพักของหอพัก AA Place",
+    "Keyword" : "POS",
+    "Technology" : "angular,node.js,express.js,mysql",
+    "Award" : "",
+    "LinkGit" : "projectcs.sci.ubu.ac.th"
+  }
