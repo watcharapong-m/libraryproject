@@ -1,0 +1,27 @@
+{% extends 'myapp/dashboard.html' %} {% block content %} {% load static %}
+<div id="testimonails">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>วิทยาศาสตร์และเทคโนโลยี</h2>
+                    <img src="{% static 'images/under-heading.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="testimonails-slider">
+                    <div class="testimonails-content" href="60114440266">
+                        {% for i in scienceadntecnologys %}
+                        <h6>{{i.ProjectName}}<a href="#">{{i.Name}}</a></h6>
+                        <p>{{i.Abstract}}</p>
+                        <hr> {% endfor %}
+                    </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
