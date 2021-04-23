@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Library Project CS UBU</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo_misc.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/testimonails-slider.css' %}">
+
+    <script src="{% static 'js/vendor/modernizr-2.6.1-respond-1.1.0.min.js' %}"></script>
+</head>
+
+<body>
+    <header>
+        <div id="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="/">
+                                <h3>
+                                    <b>Library Project CS</b>
+                                </h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="main-menu">
+                            <ul>
+                                <li><a href="/">หน้าแรก</a></li>
+                                <li><a href="#About">เกี่ยวกับ</a></li>
+                                <!-- <li><a href="">Products</a></li> -->
+                                <li><a href="#contaxt">ติดต่อ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="search-box">
+                            <a href="search">
+                                <button class="button button1" href="search">ค้นหา</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block content %} {% endblock %}
+    <footer>
+        <div class="container">
+            <div class="top-footer">
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+            </div>
+            <div class="main-footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about">
+                            <h4 class="footer-title" id="About">เกี่ยวกับ</h4>
+                            <p>เว็บคลังโปรเจคสาขาวิทยาการคอมพิวเตอร์ คณะวิทยสศาสตร์ มหาวิทยาลัยอุบลราชธานี สร้างขึ้นเพื่อให้ผู้ที่สนใจในด้านควิทยาการคอมพิวเตอร์ได้เข้ามาหาแนวทางในการทำโปรเจ็คจบจากโปรเจ็คจบของรุ่นพี่</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="more-info">
+                            <h4 class="footer-title" id="contaxt">ติดต่อ</h4>
+                            <ul>
+                                <li><i class="fa fa-phone"></i>0454444444</li>
+                                <li><i class="fa fa-globe"></i>sci ubu </li>
+                                <li><i class="fa fa-envelope"></i><a href="#">admin@ubu.ac.th.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/vendor/jquery-1.11.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.gmap3.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <style>
+        .button {
+            background-color: #ec8c33;
+            border: none;
+            color: black;
+            text-align: center;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+        .button1 {
+            padding: 10px 24px;
+        }
+    </style>
+</body>
+
+</html>

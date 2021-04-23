@@ -1,0 +1,144 @@
+<style>
+    #year {
+        color: black;
+        font-size: medium;
+    }
+</style>
+{% extends 'myapp/dashboard.html' %} {% block content %} {% load static %}
+<div id="latest-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>หมวดหมู่</h2>
+                    <img src="{% static 'images/under-heading.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="blog-post">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80" alt="" width="300" height="200" />
+                    </div>
+                    <div class="blog-content">
+                        <div class="content-show">
+                            <h4><a href="all">ทุกหมวดหมู่</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="blog-post">
+                    <div class="blog-thumb">
+                        <img src="https://images.pexels.com/photos/114820/pexels-photo-114820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" width="300" height="200" />
+                    </div>
+                    <div class="blog-content">
+                        <div class="content-show">
+                            <h4><a href="entertainment">บันเทิง</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="blog-post">
+                    <div class="blog-thumb">
+                        <img src="https://www.freestudy.com/wp-content/uploads/2019/08/Best-Free-Online-Information-Technology-Courses.jpg" alt="" width="100" height="200" />
+                    </div>
+                    <div class="blog-content">
+                        <div class="content-show">
+                            <h4><a href="scienceadntecnology">วิทยาศาสตร์และเทคโนโลยี</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="blog-post">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1607041409099-bd92431680a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="" width="100" height="200" />
+                    </div>
+                    <div class="blog-content">
+                        <div class="content-show">
+                            <h4><a href="mobileapplication">แอปพลิเคชันบนอุปกรณ์เคลื่อนที่</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="blog-post">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1009&q=80" alt="" width="100" height="200" />
+                    </div>
+                    <div class="blog-content">
+                        <div class="content-show">
+                            <h4><a href="learning">การเรียนรู้</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+            <div class="col-md-4 col-sm-6">
+                <div class="blog-post">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1508963493744-76fce69379c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="" width="100" height="200" />
+                    </div>
+                    <div class="blog-content">
+                        <div class="content-show">
+                            <h4><a href="disabledandelderly">ผู้สูงอายุและผู้พิการ</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="testimonails">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>ปีการศึกษา</h2>
+                    <img src="{% static 'images/under-heading.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="testimonails-slider">
+                    <div align="center">
+                        <a href="2563">
+                            <h3 id="year"><b>2563</b></h3>
+                        </a>
+                        <br>
+                        <a href="2564">
+                            <h3 id="year"><b>2564</b></h3>
+                        </a>
+                        <br>
+                        <a href="2565">
+                            <h3 id="year"><b>2565</b></h3>
+                        </a>
+                        <br>
+                        <a href="2566">
+                            <h3 id="year"><b>2567</b></h3>
+                        </a>
+                        <br>
+
+                        <a href="2567">
+                            <h3 id="year"><b>2567</b></h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <title>Home</title>
+{% for data in alldata %}
+<br>
+{{data.Name}}
+<br>
+{{data.ProjectName}}<br>
+{% endfor %} -->
+{% endblock %}
