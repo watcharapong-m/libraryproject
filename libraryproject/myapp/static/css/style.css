@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#project-name {
+    color: black;
+    font-size: medium;
+}

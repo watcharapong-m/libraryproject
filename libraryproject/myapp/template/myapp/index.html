@@ -1,62 +1,10 @@
+<style>
+    #year {
+        color: black;
+        font-size: medium;
+    }
+</style>
 {% extends 'myapp/dashboard.html' %} {% block content %} {% load static %}
-<!-- <div id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="heading-section">
-                    <h2>เพิ่มล่าสุด</h2>
-                    {% for data in latest %} {{data.ProjectName}} {{data.Name}}
-                    <p>{{data.Abstract}}</p>{% endfor %}
-                    <img src="{% static 'images/under-heading.png' %}" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa fa-pencil"></i>
-                    </div>
-                    {% for data in latest %}
-                    <h4>{{data.ProjectName}} {{data.Name}}</h4>
-                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu sagittis vel diam in, malesuada malesuada risus. Aenean a sem leoneski.</p>{% endfor %}
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa fa-bullhorn"></i>
-                    </div>
-                    <h4>Promotions</h4>
-                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu sagittis vel diam in, malesuada malesuada risus. Aenean a sem leoneski.</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa fa-bell"></i>
-                    </div>
-                    <h4>Ready to Serve</h4>
-                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu sagittis vel diam in, malesuada malesuada risus. Aenean a sem leoneski.</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa fa-heart"></i>
-                    </div>
-                    <h4>Satisfaction</h4>
-                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu sagittis vel diam in, malesuada malesuada risus. Aenean a sem leoneski.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-
-
-
 <div id="latest-blog">
     <div class="container">
         <div class="row">
@@ -68,125 +16,101 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                    <div class="blog-thumb">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80" alt="" width="300" height="200" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="content-show">
-                            <h4><a href="all">ทุกหมวดหมู่</a></h4>
-                            <!-- <span>29 Sep 2084</span> -->
-                        </div>
-                        <div class="content-hide">
-                            <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor,
-                                non pulvinar felis sollicitudin.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                    <div class="blog-thumb">
-                        <img src="https://images.pexels.com/photos/114820/pexels-photo-114820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" width="300" height="200" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="content-show">
-                            <h4><a href="entertainment">บันเทิง</a></h4>
-                            <!-- <span>29 Sep 2084</span> -->
-                        </div>
-                        <div class="content-hide">
-                            <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor,
-                                non pulvinar felis sollicitudin.</p>
+            <ul>
+                <a href="/all">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="{% static 'images/1.png' %}" alt="" width="300" height="200" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4>
+                                        <a href="/all">ทุกหมวดหมู่</a>
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                    <div class="blog-thumb">
-                        <img src="https://www.freestudy.com/wp-content/uploads/2019/08/Best-Free-Online-Information-Technology-Courses.jpg" alt="" width="100" height="200" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="content-show">
-                            <h4><a href="scienceadntecnology">วิทยาศาสตร์และเทคโนโลยี</a></h4>
-                            <!-- <span>23 Sep 2084</span> -->
-                        </div>
-                        <div class="content-hide">
-                            <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor,
-                                non pulvinar felis sollicitudin.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                    <div class="blog-thumb">
-                        <img src="https://images.unsplash.com/photo-1607041409099-bd92431680a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="" width="100" height="200" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="content-show">
-                            <h4><a href="mobileapplication">แอปพลิเคชันบนอุปกรณ์เคลื่อนที่</a></h4>
-                            <!-- <span>14 Sep 2084</span> -->
-                        </div>
-                        <div class="content-hide">
-                            <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor,
-                                non pulvinar felis sollicitudin.</p>
+                </a>
+                <a href="/entertainment">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="{% static 'images/2.png' %}" alt="" width="300" height="200" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4>
+                                        <a href="/entertainment">บันเทิง</a>
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                    <div class="blog-thumb">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1009&q=80" alt="" width="100" height="200" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="content-show">
-                            <h4><a href="learning">การเรียนรู้</a></h4>
-                            <!-- <span>25 Aug 2084</span> -->
-                        </div>
-                        <div class="content-hide">
-                            <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor,
-                                non pulvinar felis sollicitudin.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                    <div class="blog-thumb">
-                        <img src="https://images.unsplash.com/photo-1508963493744-76fce69379c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="" width="100" height="200" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="content-show">
-                            <h4><a href="disabledandelderly">ผู้สูงอายุและผู้พิการ</a></h4>
-                            <!-- <span>17 Aug 2084</span>+ -->
-                        </div>
-                        <div class="content-hide">
-                            <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor,
-                                non pulvinar felis sollicitudin.</p>
+                </a>
+                <a href="/scienceadntecnology">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="{% static 'images/3.png' %}" alt="" width="100" height="200" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4>
+                                        <a href="/scienceadntecnology">วิทยาศาสตร์และเทคโนโลยี</a>
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                    <div class="blog-thumb">
-                        <img src="{% static 'images/blogpost1.jpg' %}" alt="" width="100" height="200" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="content-show">
-                            <h4><a href="#">Fresh Fruit Juice</a></h4> -->
-            <!-- <span>12 Aug 2084</span> -->
-            <!-- </div>
-                        <div class="content-hide">
-                            <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi
-                                tempor, non pulvinar felis sollicitudin.</p>
+                </a>
+                <a href="/mobileapplication">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="{% static 'images/4.png' %}" alt="" width="100" height="200" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4>
+                                        <a href="/mobileapplication">แอปพลิเคชันบนอุปกรณ์เคลื่อนที่</a>
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div> -->
+                </a>
+                <a href="/learning">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="{% static 'images/5.png' %}" alt="" width="100" height="200" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4>
+                                        <a href="/learning">การเรียนรู้</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/disabledandelderly">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="{% static 'images/6.png' %}" alt="" width="100" height="200" />
+                            </div>
+                            <div class="blog-content">
+                                <div class="content-show">
+                                    <h4><a href="/disabledandelderly">ผู้สูงอายุและผู้พิการ</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
         </div>
     </div>
 </div>
@@ -205,42 +129,31 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="testimonails-slider">
-                    <ul class="slides">
-                        <li>
-                            <div class="heading-section">
-                                <h2>2563</h2>
-                                <!-- <img src="{% static 'images/under-heading.png' %}" alt=""> -->
-                            </div>
-                        </li>
-                        <li>
-                            <div class="heading-section">
-                                <h2>2564</h2>
-                                <!-- <img src="{% static 'images/under-heading.png' %}" alt=""> -->
-                            </div>
-                        </li>
-                        <li>
-                            <div class="heading-section">
-                                <h2>2565</h2>
-                                <!-- <img src="{% static 'images/under-heading.png' %}" alt=""> -->
-                            </div>
-                        </li>
-                        <li>
-                            <div class="heading-section">
-                                <h2>2566</h2>
-                                <!-- <img src="{% static 'images/under-heading.png' %}" alt=""> -->
-                            </div>
-                        </li>
-                    </ul>
+                    <div align="center">
+                        <a href="2563">
+                            <h3 id="year"><b>2563</b></h3>
+                        </a>
+                        <br>
+                        <a href="2564">
+                            <h3 id="year"><b>2564</b></h3>
+                        </a>
+                        <br>
+                        <a href="2565">
+                            <h3 id="year"><b>2565</b></h3>
+                        </a>
+                        <br>
+                        <a href="2566">
+                            <h3 id="year"><b>2567</b></h3>
+                        </a>
+                        <br>
+
+                        <a href="2567">
+                            <h3 id="year"><b>2567</b></h3>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- <title>Home</title>
-{% for data in alldata %}
-<br>
-{{data.Name}}
-<br>
-{{data.ProjectName}}<br>
-{% endfor %} -->
 {% endblock %}

@@ -12,11 +12,17 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="testimonails-slider">
-                    <div class="testimonails-content">
-                        {% for data in alldata %}
-                        <h6>{{data.ProjectName}}<a href="#">{{data.Name}}</a></h6>
-                        <p>{{data.Abstract}}</p>
-                        <hr> {% endfor %}
+                    <div>
+                        <ul id="myUL">
+                            {% for data in alldata %}
+                            <li>
+                                <a href={% url 'detail' data.id %}>
+                                    <h5>
+                                        <p id="project-name">ชื่อโปรเจค : {{data.ProjectName}}</p> ชื่อ - นามสกุล : {{data.Name}}</h5>
+                                </a>
+                                <hr> {% endfor %}
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

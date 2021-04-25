@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading-section">
-                    <h2>บันเทิง</h2>
+                    <h2>ปีการศึกษา 2567</h2>
                     <img src="{% static 'images/under-heading.png' %}" alt="">
                 </div>
             </div>
@@ -12,18 +12,16 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="testimonails-slider">
-                    <div>
-                        <ul id="myUL">
-                            {% for data in entertainments %}
-                            <li>
-                                <a href={% url 'detail' data.id %}></a>
+                    <ul id="myUL">
+                        {% for data in years %}
+                        <li>
+                            <a href={% url 'detail' data.id %}>
                                 <h5>
                                     <p id="project-name">ชื่อโปรเจค : {{data.ProjectName}}</p> ชื่อ - นามสกุล : {{data.Name}}</h5>
-                                </a>
-                                <hr> {% endfor %}
-                            </li>
-                        </ul>
-                    </div>
+                            </a>
+                            <hr> {% endfor %}
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

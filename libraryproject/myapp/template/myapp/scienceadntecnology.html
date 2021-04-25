@@ -1,4 +1,4 @@
-{% extends 'myapp/dashboard.html' %} {% block content %} {% load static %}
+ {% extends 'myapp/dashboard.html' %} {% block content %} {% load static %}
 <div id="testimonails">
     <div class="container">
         <div class="row">
@@ -12,13 +12,18 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="testimonails-slider">
-                    <div class="testimonails-content" href="60114440266">
-                        {% for i in scienceadntecnologys %}
-                        <h6>{{i.ProjectName}}<a href="#">{{i.Name}}</a></h6>
-                        <p>{{i.Abstract}}</p>
-                        <hr> {% endfor %}
+                    <div>
+                        <ul id="myUL">
+                            {% for data in scienceadntecnologys %}
+                            <li>
+                                <a href={% url 'detail' data.id %}>
+                                    <h5>
+                                        <p id="project-name">ชื่อโปรเจค : {{data.ProjectName}}</p> ชื่อ - นามสกุล : {{data.Name}}</h5>
+                                </a>
+                                <hr> {% endfor %}
+                            </li>
+                        </ul>
                     </div>
-                    </ul>
                 </div>
             </div>
         </div>

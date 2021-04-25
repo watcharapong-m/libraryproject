@@ -99,14 +99,32 @@ def Fetchbytypemobileapplication(request):
     # print('1111111111111')
     return render(request,'myapp/mobileapplications.html', {'mobileapplications':mobileapplications})
 
-def Fetchbyyear(request):
+def year2563(request):
     years = DataProject.objects.filter(GraduationYear='2563')
     return render(request, 'myapp/2563.html', {'years':years})
 
-def detail(request):
-    data0266 = DataProject.objects.all()
+def year2564(request):
+    years = DataProject.objects.filter(GraduationYear='2564')
+    return render(request, 'myapp/2564.html', {'years':years})
+
+def year2565(request):
+    years = DataProject.objects.filter(GraduationYear='2565')
+    return render(request, 'myapp/2565.html', {'years':years})
+
+def year2566(request):
+    years = DataProject.objects.filter(GraduationYear='2566')
+    return render(request, 'myapp/2566.html', {'years':years})
+
+def year2567(request):
+    years = DataProject.objects.filter(GraduationYear='2567')
+    return render(request, 'myapp/2567.html', {'years':years})
+
+def detail(request, id):
+    # data0266 = DataProject.objects.all()
+    datadetail = DataProject.objects.filter(id=id)
     # print(DataProject.objects.all())
-    return render(request, 'myapp/60114440266.html',{'data0266':data0266})
+    print('ID :', id)
+    return render(request, 'myapp/detail.html',{'datadetail':datadetail})
 
 # def datanew(request):
 #     datanew = DataProject.objects.all()
