@@ -20,16 +20,8 @@ urlpatterns = [
     path('2565/',views.year2565, name='2565'),
     path('2566/',views.year2566, name='2566'),
     path('2567/',views.year2567, name='2567'),
-    # path('detail/',views.detail, name='detail'),
     path('<int:id>/detail',views.detail, name='detail'),
     path('all/', views.dataAll, name='dataall'),
     path('search/', views.search, name='search'),
     path('',views.index, name='index'),
-
-
-
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
-
 ]
-urlpatterns=urlpatterns+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -16,9 +16,9 @@
                         <ul id="myUL">
                             {% for data in entertainments %}
                             <li>
-                                <a href={% url 'detail' data.id %}></a>
-                                <h5>
-                                    <p id="project-name">ชื่อโปรเจค : {{data.ProjectName}}</p> ชื่อ - นามสกุล : {{data.Name}}</h5>
+                                <a href={% url 'detail' data.id %}>
+                                    <h5>
+                                        <p id="project-name">ชื่อโปรเจค : {{data.ProjectName}}</p> ชื่อ - นามสกุล : {{data.Name}}</h5>
                                 </a>
                                 <hr> {% endfor %}
                             </li>

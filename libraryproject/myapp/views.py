@@ -10,7 +10,6 @@ import json
 import mysql.connector
 from django.db.models import Q 
 
-# from .getdata import *
 from .models import DataProject
 import datetime
 from django.db import connection
@@ -49,16 +48,13 @@ def index(request):
         data['Technology'],
         data['Award'],
         data['LinkGit'],
-        # print(data)
         Value = []
         for i in data.values():
             Value.append(i)
-        # print(Value)
 
         x = []
         for i in range(1):
             x.append(Value)
-        # print(len(x))
 
         for i in range(len(x)):
             StudentID = x[i][0]
@@ -78,11 +74,11 @@ def index(request):
     return render(request, 'myapp/index.html')
 
 def Fetchbytypeentertainment(request):
-    entertainments = DataProject.objects.filter(Type='เพื่อความบันเทิง')
+    entertainments = DataProject.objects.filter(Type='โปรแกรมเพื่อความบันเทิง')
     return render(request,'myapp/entertainment.html', {'entertainments':entertainments})
 
 def Fetchbytypelearning(request):
-    learning = DataProject.objects.filter(Type='เพื่อส่งเสริมการเรียนรู้')
+    learning = DataProject.objects.filter(Type='โปรแกรมเพื่อส่งเสริมทักษะการเรียนรู้')
     return render(request,'myapp/learning.html', {'learning':learning})
 
 def Fetchbytypedisabledandelderly(request):
@@ -95,8 +91,6 @@ def Fetchbytypescienceadntecnology(request):
 
 def Fetchbytypemobileapplication(request):
     mobileapplications = DataProject.objects.filter(Type='Mobile Application โปรแกรมเพื่อการประยุกต์ใช้งานบนเครือข่ายสำหรับอุปกรณ์คอมพิวเตอร์เคลื่อนที่')
-    # mobileapplications = DataProject.objects.raw('SELECT * FROM librarprojectapp_dataproject WHERE Type = Mobile Application โปรแกรมเพื่อการประยุกต์ใช้งานบนเครือข่ายสำหรับอุปกรณ์คอมพิวเตอร์เคลื่อนที่')
-    # print('1111111111111')
     return render(request,'myapp/mobileapplications.html', {'mobileapplications':mobileapplications})
 
 def year2563(request):
@@ -120,17 +114,9 @@ def year2567(request):
     return render(request, 'myapp/2567.html', {'years':years})
 
 def detail(request, id):
-    # data0266 = DataProject.objects.all()
     datadetail = DataProject.objects.filter(id=id)
-    # print(DataProject.objects.all())
     print('ID :', id)
     return render(request, 'myapp/detail.html',{'datadetail':datadetail})
-
-# def datanew(request):
-#     datanew = DataProject.objects.all()
-#     print(datanew)
-#     print('Success')
-#     return render(request, 'myapp/index.html', {'datanew':datanew})
 
 def dataAll(request):
     alldata = DataProject.objects.all()
