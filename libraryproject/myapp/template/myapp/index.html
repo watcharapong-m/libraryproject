@@ -42,7 +42,7 @@
                             <div class="blog-content">
                                 <div class="content-show">
                                     <h4>
-                                        <a href="/entertainment">บันเทิง</a>
+                                        <a href="/entertainment">ความบันเทิง</a>
                                     </h4>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                             <div class="blog-content">
                                 <div class="content-show">
                                     <h4>
-                                        <a href="/scienceadntecnology">วิทยาศาสตร์และเทคโนโลยี</a>
+                                        <a href="/scienceadntecnology">การพัฒนาด้านวิทยาศาสตร์และเทคโนโลยี</a>
                                     </h4>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                             <div class="blog-content">
                                 <div class="content-show">
                                     <h4>
-                                        <a href="/learning">การเรียนรู้</a>
+                                        <a href="/learning">ส่งเสริมทักษะการเรียนรู้</a>
                                     </h4>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@
                             </div>
                             <div class="blog-content">
                                 <div class="content-show">
-                                    <h4><a href="/disabledandelderly">ผู้สูงอายุและผู้พิการ</a></h4>
+                                    <h4><a href="/disabledandelderly">ช่วยคนพิการและผู้สูงอายุ</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -130,30 +130,14 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="testimonails-slider">
                     <div align="center">
-                        <a href="2563">
-                            <h3 id="year"><b>2563</b></h3>
+                        {% for year in years %}
+                        <a href={% url 'year' year %}>
+                            <h3 id="year"><b>{{year}}</b></h3>
                         </a>
-                        <br>
-                        <a href="2564">
-                            <h3 id="year"><b>2564</b></h3>
-                        </a>
-                        <br>
-                        <a href="2565">
-                            <h3 id="year"><b>2565</b></h3>
-                        </a>
-                        <br>
-                        <a href="2566">
-                            <h3 id="year"><b>2566</b></h3>
-                        </a>
-                        <br>
-
-                        <a href="2567">
-                            <h3 id="year"><b>2567</b></h3>
-                        </a>
+                        <br> {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}

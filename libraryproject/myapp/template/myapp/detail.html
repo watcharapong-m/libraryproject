@@ -14,49 +14,48 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="testimonails-slider">
                     <div>
-                        <table style="width:100%">
+                        <table style="width:100%" color="white">
 
                             <tr>
-                                <th>Name</th>
+                                <th>ชื่อ-สกุล : </th>
                                 <td>{{i.Name}}</td>
                             </tr>
                             <tr>
-                                <th>StudentID</th>
+                                <th>รหัสนักศึกษา : </th>
                                 <td>{{i.StudentID}}</td>
                             </tr>
                             <tr>
-                                <th>StudentID</th>
+                                <th>ชื่อโครงงาน : </th>
                                 <td>{{i.ProjectName}}</td>
                             </tr>
                             <tr>
-                                <th>Type</th>
+                                <th>ประเภทโครงงาน : </th>
                                 <td>{{i.Type}}</td>
                             </tr>
                             <tr>
-                                <th>GraduationYear</th>
+                                <th>ปีการศึกษา : </th>
                                 <td>{{i.GraduationYear}}</td>
                             </tr>
                             <tr>
-                                <th>Abstract</th>
+                                <th>บทคัดย่อ : </th>
                                 <td>{{i.Abstract}}</td>
                             </tr>
                             <tr>
-                                <th>Keyword</th>
+                                <th>คำหลัก : </th>
                                 <td>{{i.Keyword}}</td>
                             </tr>
                             <tr>
-                                <th>Technology</th>
+                                <th>เทคโนโลยีที่ใช้ในการพัฒนา : </th>
                                 <td>{{i.Technology}}</td>
                             </tr>
                             <tr>
-                                <th>Award</th>
+                                <th>รางวัลที่เคยได้รับ : </th>
                                 <td>{{i.Award}}</td>
                             </tr>
                             <tr>
-                                <th>LinkGit</th>
-                                <!-- <td>{{i.LinkGit}}</td> -->
+                                <th>ที่อยู่ลิงค์ของโครงงาน</th>
                                 <td>
-                                    <a href={{i.LinkGit}}>Open in Git</a>
+                                    <a href="//{{i.LinkGit}}">Open in Git</a>
                                 </td>
                             </tr>{% endfor %}
                         </table>
