@@ -34,12 +34,17 @@ def index(request):
             list_data.append(dataclean)
     base_url = "http://projectcs.sci.ubu.ac.th/WatcharapongNasaree/libraryproject/raw/master/"
     success_list = []
-    try :
-        for i in list_data:
-            semi_url = base_url+i
-            soup = urllib.request.urlopen(semi_url).read().decode('utf8')
-            data = json.loads(soup)
 
+    for i in list_data:
+        semi_url = base_url+i
+        soup = urllib.request.urlopen(semi_url).read().decode('utf8')
+        
+        try:
+            # data = json.loads(soup)
+            data = json.loads(soup, strict=False)
+        except:
+            return render(request, 'myapp/index.html',{'years': getYear()})
+        else:
             data['Name'],
             data['StudentID'],
             data['ProjectName'],
@@ -71,13 +76,18 @@ def index(request):
                 Technology = x[i][8]
                 Award = x[i][9]
                 LinkGit = x[i][10]
-
                 
-                DataProject.objects.update_or_create(StudentID=StudentID, Name=Name, ProjectName=ProjectName, Advisor=Advisor, Type=Type,
-                                                    GraduationYear=GraduationYear, Abstract=Abstract, Keyword=Keyword, Technology=Technology, Award=Award, LinkGit=LinkGit)
-    except :
-        return render(request, 'myapp/index.html',{'years': getYear()})
-              
+                years = []
+    AllStudentID = []
+    datas = DataProject.objects.all()
+    for std in datas :
+        AllStudentID.append(std.StudentID)
+    if StudentID in AllStudentID:
+        print('ซ้ำไอ้ควย')
+    else:
+        DataProject.objects.update_or_create(StudentID=StudentID, Name=Name, ProjectName=ProjectName, Advisor=Advisor, Type=Type,GraduationYear=GraduationYear, Abstract=Abstract, Keyword=Keyword, Technology=Technology, Award=Award, LinkGit=LinkGit)
+                # std = DataProject.objects.filter(StudentID)
+                # print(std)
     return render(request, 'myapp/index.html',{'years': getYear()})
 
 def getYear():
@@ -88,6 +98,11 @@ def getYear():
             if data.GraduationYear not in years:
                 years.append(data.GraduationYear)
     return years
+
+# def STDCheck():
+#     std = DataProject.object.all()
+#     liststd = []
+#     return x
 
 def Fetchbytypeentertainment(request):
     entertainments = DataProject.objects.filter(Type='โปรแกรมเพื่อความบันเทิง')
@@ -118,9 +133,13 @@ def Fetchbytypemobileapplication(request):
     return render(request, 'myapp/mobileapplications.html', {'mobileapplications': mobileapplications})
 
 def year(request, year):
+    print('year: ',year)
     if year == 'all':
         alldata = DataProject.objects.all()
         return render(request, 'myapp/all.html', {'alldata': alldata})
+    elif year == 'search':
+        alldata = DataProject.objects.all()
+        return render(request, 'myapp/search.html', {'alldata': alldata})
     years = DataProject.objects.filter(GraduationYear=year)
     return render(request, 'myapp/year.html', {'years': years,'numberyear':year})
 
