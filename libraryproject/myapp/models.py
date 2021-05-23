@@ -13,3 +13,4 @@ class DataProject(models.Model):
     Technology = models.CharField(max_length=255, blank=False)
     Award = models.CharField(max_length=255, blank=False)
     LinkGit = models.CharField(max_length=100, blank=False)
+    created_at = models.DateTimeField(auto_now_add=True)

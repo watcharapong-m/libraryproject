@@ -21,7 +21,15 @@
     <link rel="stylesheet" href="{% static 'css/detail.css' %}">
     <link rel="stylesheet" href="{% static 'scss/loading.scss' %}">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <script src="{% static 'js/vendor/modernizr-2.6.1-respond-1.1.0.min.js' %}"></script>
+    <style>
+    *,a,p, li,ul,h1,h2,h3,h3,h4,h5 {
+        box-sizing: border-box;
+        font-family: 'Prompt', sans-serif;
+    }
+    </style>
 </head>
 
 <body>
@@ -34,16 +42,19 @@
                             <a href="/">
                                 <h3>
                                     <b>Library Project CS</b>
-                                    <!-- <img src="{% static 'images/logo.png' %}" width="300" height="50"> -->
                                 </h3>
+                                {% comment %} <img src="{% static 'images/logo1.png' %}" width="200" height="70"> {% endcomment %}
+                            {% comment %} <img src="{% static'images/logo.png' %}"> {% endcomment %}
+                            {% comment %} {% static 'scss/loading.scss' %} {% endcomment %}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="main-menu">
                             <ul>
-                                <li><a href="/">หน้าแรก</a></li>
-                                <li><a href="#About">เกี่ยวกับ</a></li>
-                                <li><a href="#contaxt">ติดต่อ</a></li>
+                            
+                                <li><a href="/" style="font-family: 'Prompt', sans-serif;">หน้าแรก</a></li>
+                                <li><a href="#About" style="font-family: 'Prompt', sans-serif;">เกี่ยวกับ</a></li>
+                                <li><a href="#contaxt" style="font-family: 'Prompt', sans-serif;">ติดต่อ</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,13 +82,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="about">
-                            <h4 class="footer-title" id="About">เกี่ยวกับ</h4>
-                            <p>เว็บคลังโปรเจคสาขาวิทยาการคอมพิวเตอร์ คณะวิทยสศาสตร์ มหาวิทยาลัยอุบลราชธานี สร้างขึ้นเพื่อให้ผู้ที่สนใจในด้านควิทยาการคอมพิวเตอร์ได้เข้ามาหาแนวทางในการทำโปรเจ็คจบจากโปรเจ็คจบของรุ่นพี่</p>
+                            <h4 class="footer-title" id="About" style="font-family: 'Prompt', sans-serif;">เกี่ยวกับ</h4>
+                            <p >เว็บคลังโปรเจคสาขาวิทยาการคอมพิวเตอร์ คณะวิทยสศาสตร์ มหาวิทยาลัยอุบลราชธานี สร้างขึ้นเพื่อให้ผู้ที่สนใจในด้านควิทยาการคอมพิวเตอร์ได้เข้ามาหาแนวทางในการทำโปรเจ็คจบจากโปรเจ็คจบของรุ่นพี่</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="more-info">
-                            <h4 class="footer-title" id="contaxt">ติดต่อ</h4>
+                            <h4 class="footer-title" id="contaxt" style="font-family: 'Prompt', sans-serif;">ติดต่อ</h4>
                             <ul>
                                 <li><i class="fa fa-phone"></i>0454544544</li>
                                 <li><i class="fa fa-globe"></i>sci ubu </li>

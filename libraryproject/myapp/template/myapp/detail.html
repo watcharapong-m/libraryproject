@@ -4,8 +4,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading-section">
-                    {% for i in datadetail%}
-                    <h2>รายละเอียดโครงงานเรื่อง {{i.ProjectName}}</h2>
+                
+                    {% comment %} {% for i in datadetail%} {% endcomment %}
+                    <h2 style="font-family: 'Prompt', sans-serif;">รายละเอียดโครงงานเรื่อง {{datadetail.ProjectName}}</h2>
                     <img src="{% static 'images/under-heading.png' %}" alt="">
                 </div>
             </div>
@@ -17,50 +18,56 @@
                         <table class="table table-hover" id="task-table">
                             <tbody>
                                 <tr>
-                                    <th>ชื่อ-สกุล : </th>
-                                    <td>{{i.Name}}</td>
+                                    <th>ชื่อ-สกุล</th>
+                                    <td>{{datadetail.Name}}</td>
                                 </tr>
                                 <tr>
-                                    <th>รหัสนักศึกษา : </th>
-                                    <td>{{i.StudentID}}</td>
+                                    <th>รหัสนักศึกษา</th>
+                                    <td>{{datadetail.StudentID}}</td>
                                 </tr>
                                 <tr>
-                                    <th>ชื่อโครงงาน : </th>
-                                    <td>{{i.ProjectName}}</td>
+                                    <th>ชื่อโครงงาน</th>
+                                    <td>{{datadetail.ProjectName}}</td>
                                 </tr>
                                 <tr>
-                                    <th>ประเภทโครงงาน : </th>
-                                    <td>{{i.Type}}</td>
+                                    <th>ประเภทโครงงาน</th>
+                                    <td>{{datadetail.Type}}</td>
                                 </tr>
                                 <tr>
-                                    <th>ปีการศึกษา : </th>
-                                    <td>{{i.GraduationYear}}</td>
+                                    <th>ปีการศึกษา</th>
+                                    <td>{{datadetail.GraduationYear}}</td>
                                 </tr>
                                 <tr>
-                                    <th>บทคัดย่อ : </th>
-                                    <td>{{i.Abstract}}</td>
+                                    <th>บทคัดย่อ</th>
+                                    <td>{{datadetail.Abstract}}</td>
                                 </tr>
                                 <tr>
-                                    <th>คำหลัก : </th>
-                                    <td>{{i.Keyword}}</td>
+                                    <th>คำหลัก</th>
+                                    <td>{{datadetail.Keyword}}</td>
                                 </tr>
                                 <tr>
-                                    <th>เทคโนโลยีที่ใช้ในการพัฒนา : </th>
-                                    <td>{{i.Technology}}</td>
+                                    <th>เทคโนโลยีที่ใช้ในการพัฒนา</th>
+                                    <td>{{datadetail.Technology}}</td>
                                 </tr>
                                 <tr>
-                                    <th>รางวัลที่เคยได้รับ : </th>
-                                    <td>{{i.Award}}</td>
+                                    <th>รางวัลที่เคยได้รับ</th>
+                                    <td>{{datadetail.Award}}</td>
                                 </tr>
                                 <tr>
                                     <th>ที่อยู่ลิงค์ของโครงงาน</th>
                                     <td>
-                                        <a href="//{{i.LinkGit}}">Open in Git</a>
+                                        <a href="{{datadetail.LinkGit}}">ดูรายละเอียดเพิ่มเติมบน projectcs.sci.ubu.ac.th</a>
                                     </td>
-                                </tr>{% endfor %}
+                                </tr>
+                                <tr>
+                                    <th>อัปโหลดเมื่อ</th>
+                                    <td>
+                                      {{datadetail.datetime}}  
+                                    </td>
+                                </tr>  
+                                {% comment %} {% endfor %} {% endcomment %}
                             </tbody>
                         </table>
-                    </div>
                 </div>
             </div>
         </div>
