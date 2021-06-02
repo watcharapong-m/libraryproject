@@ -26,7 +26,7 @@ SECRET_KEY = '@hi+j*hhbalkf3=jv@6g8)w(hzn+2ulb$9zft*p+%!y0j3c^w1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['csprojectwarehouse.pythonanywhere.com']
 
 
 # Application definition
@@ -82,14 +82,12 @@ WSGI_APPLICATION = 'libraryproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'libraryproject',
-#         'USER': 'root',
-#         'PASSWORD': '',
-#         'HOST': '127.0.0.1',
-#         'PORT': '3306',
+        'NAME': 'csprojectwarehou$libraryproject',
+        'USER': 'csprojectwarehou',
+        'PASSWORD': 'fdWt9622',
+        'HOST': 'csprojectwarehouse.mysql.pythonanywhere-services.com',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -119,7 +117,19 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
+
+
+# STATIC_URL = '/static/'
+# STATIC_ROOT = '/home/csprojectwarehouse/libraryproject/myapp/static'
+
+# # Default primary key field type
+# # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_ROOT = '/home/csprojectwarehouse/libraryproject/myapp/static'
+# or, eg,
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
